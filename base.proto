@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package grpc.base.v1;
+
+message MetaInfo {
+  string id = 1;
+}
+
+message Nil {
+  // nothing here
+}

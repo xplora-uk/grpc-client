@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package grpc.echo.v1;
+
+import public "grpc.base.v1";
+
+service EchoService {
+  rpc Echo (EchoRequest) returns (EchoReply) {}
+  rpc EchoWithMeta (EchoRequestWithMeta) returns (EchoReplyWithMeta) {}
+  rpc EchoWithNil (Nil) returns (Nil) {}
+}
+
+message EchoRequest {
+  string data = 1;
+}
+
+message EchoRequestWithMeta {
+  string data = 1;
+  MetaInfo meta = 2;
+}
+
+message EchoReply {
+  string data = 1;
+}
+
+message EchoReplyWithMeta {
+  string data = 1;
+  MetaInfo meta = 2;
+}
