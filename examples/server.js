@@ -1,8 +1,6 @@
 const { loadPackageDefinition, Server, ServerCredentials } = require('@grpc/grpc-js');
 const { loadSync } = require('@grpc/proto-loader');
-const { join } = require('path');
-const lib = require('../lib');
-const { host } = require('./_shared');
+const { host, echoProtoFile, baseProtoFile } = require('./_shared');
 
 const options = {
   defaults: true,
@@ -12,9 +10,7 @@ const options = {
   oneofs  : true,
 };
 
-const baseFile = join(__dirname, '..', 'base.proto');
-const echoFile = join(__dirname, '..', 'echo.proto');
-const echoProto = loadSync([baseFile, echoFile], options);
+const echoProto = loadSync([baseProtoFile, echoProtoFile], options);
 const echoProtocol = loadPackageDefinition(echoProto);
 const echoServiceInterface = echoProtocol.grpc.echo.v1.EchoService.service;
 

@@ -6,7 +6,7 @@ It does not support streams.
 
 ## requirements for dev
 
-* Node v14.x
+* Node v18.x
 
 ### install
 
@@ -24,7 +24,7 @@ npm run test
 
 ## requirements to use
 
-* Node v14.x
+* Node v18.x
 
 ### install library
 

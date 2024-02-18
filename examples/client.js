@@ -1,4 +1,4 @@
-const { host } = require('./_shared');
+const { host, echoProtoFile, baseProtoFile } = require('./_shared');
 const newGrpcClient = require('../lib');
 
 main();
@@ -6,7 +6,10 @@ main();
 async function main() {
 
   const echoService = newGrpcClient({
-    protoFiles: ['../base.proto', '../echo.proto'],
+    protoFiles: [
+      baseProtoFile,
+      echoProtoFile,
+    ],
     packageName: 'grpc.echo.v1',
     serviceName: 'EchoService',
     host,

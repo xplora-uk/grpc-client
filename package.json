@@ -1,6 +1,6 @@
 {
   "name": "@xplora-uk/grpc-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "gRPC client based on @grpc/grpc-js and @grpc/proto-loader",
   "main": "lib/index.js",
   "type": "commonjs",
@@ -20,7 +20,7 @@
     "proto",
     "client"
   ],
-  "author": "Haci Murat Yaman",
+  "author": "Xplora R&D Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xplora-uk/grpc-client/issues"
@@ -35,5 +35,8 @@
     "@grpc/grpc-js": "^1.8.11",
     "@grpc/proto-loader": "^0.7.5",
     "lodash.get": "^4.4.2"
+  },
+  "engines": {
+    "node": ">=18.16.0"
   }
 }

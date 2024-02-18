@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package grpc.echo.v1;
 
-import public "grpc.base.v1";
+import public "grpc.base.v1.proto";
 
 service EchoService {
   rpc Echo (EchoRequest) returns (EchoReply) {}
